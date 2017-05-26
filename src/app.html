@@ -1,11 +1,22 @@
 <template>
   <nav>
-   <div class="nav-wrapper">
-     <a href="#" class="brand-logo">Gestor de encuestas</a>
-     <ul id="nav-mobile" class="right hide-on-med-and-down">
-       <li><a href="collapsible.html">JavaScript</a></li>
-     </ul>
-   </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="right nav navbar-nav">
+        <li repeat.for="route of router.navigation" class="${route.isActive ? 'active' : ''}">
+          <a data-toggle="collapse" data-target="#bs-example-navbar-collapse-1.in" href.bind="route.href">${route.title}</a>
+        </li>
+      </ul>
+      <ul class='nav navbar-nav navbar-right'>
+        <li>
+          <i class='fa fa-cog fa-spin fa-3x' style='margin: 0 auto'if.bind="router.isNavigating"></i>
+        </li>
+      </ul>
+    </div>
  </nav>
-  ${hola}
+
+ <div class='container'>
+   <div class='col-xs-10'>
+     <router-view ></router-view>
+   </div>
+ </div>
 </template>
