@@ -1,0 +1,25 @@
+parser: babel-eslint
+extends: airbnb-base
+settings:
+  'import/core-modules':
+    - aurelia-auth
+    - aurelia-environment
+    - aurelia-event-aggregator
+    - aurelia-fetch-client
+    - aurelia-framework
+    - aurelia-i18n
+    - aurelia-logging-console
+    - aurelia-materialize-bridge
+    - aurelia-router
+    - lodash
+    - materialize
+    - md5
+rules:
+  # Should we prefer default export?
+  'import/prefer-default-export': off
+  'class-methods-use-this': off
+  'no-underscore-dangle': off
+globals:
+  'document': true
+  'window': true
+  '$': true

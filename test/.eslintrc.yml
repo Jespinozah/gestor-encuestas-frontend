@@ -1,0 +1,36 @@
+parser: babel-eslint
+extends: airbnb-base
+settings:
+  'import/core-modules':
+    - aurelia-auth
+    - aurelia-bootstrapper
+    - aurelia-environment
+    - aurelia-event-aggregator
+    - aurelia-fetch-client
+    - aurelia-framework
+    - aurelia-i18n
+    - aurelia-logging-console
+    - aurelia-materialize-bridge
+    - aurelia-pal-browser
+    - aurelia-polyfills
+    - aurelia-router
+    - aurelia-testing
+    - lodash
+    - materialize
+    - md5
+rules:
+  # Should we prefer default export?
+  'import/prefer-default-export': off
+  'class-methods-use-this': off
+globals:
+  'document': true
+  'window': true
+  '$': true
+  'describe': true
+  'xdescribe': true
+  'beforeEach': true
+  'afterEach': true
+  'it': true
+  'xit': true
+  'expect': true
+  'spyOn': true
